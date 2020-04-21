@@ -847,7 +847,7 @@ query MyFeed {
       )) as Types.ComplexPluginOutput;
 
       expect(content.content).toBeSimilarStringTo(`
-      export type TestComponentProps = Omit<ApolloReactComponents.QueryComponentOptions<TestQuery, TestQueryVariables>, 'query'> & ({ variables: TestQueryVariables; skip?: boolean; } | { skip: boolean; });
+      export type TestComponentProps = Omit<ApolloReactComponents.QueryComponentOptions<TestQuery, TestQueryVariables>, 'query'> & ({ variables: TestQueryVariables; skip?: boolean; } | { skip?: boolean; });
       `);
 
       expect(content.content).toBeSimilarStringTo(`
